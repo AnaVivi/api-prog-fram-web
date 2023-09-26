@@ -1,0 +1,31 @@
+{
+  "name": "api-prog-fram-web",
+  "version": "1.0.0",
+  "description": "Atividade em grupo para construção de API da disciplina Programação com Frameworks Web",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnaVivi/api-prog-fram-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnaVivi/api-prog-fram-web/issues"
+  },
+  "homepage": "https://github.com/AnaVivi/api-prog-fram-web#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
