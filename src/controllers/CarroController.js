@@ -38,6 +38,7 @@ module.exports = {
     }
     res.json(json);
   },
+
   // Esta função 'alterar' é uma rota de API que permite a atualização das informações de um carro.
   // Requer um objeto 'req' contendo os parâmetros da solicitação HTTP e um objeto 'res' para enviar a resposta.
   alterar: async (req, res) => {
@@ -59,5 +60,23 @@ module.exports = {
     }
 
     res.json(json);
+  },
+
+  deletar: async (req, res) => {
+    const { codigo } = req.params;
+
+    try {
+      if (!codigo) {
+        return res.status(404).json({ message: "Código não informado" });
+      }
+
+      await CarroService.deletar(codigo);
+
+      return res.status(200).json({ message: "Carro deletado com sucesso" });
+    } catch (error) {
+      return res
+        .status(500)
+        .json({ message: "Erro ao deletar carro", error: error.message });
+    }
   },
 };
