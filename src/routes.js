@@ -6,6 +6,9 @@ const CarroController = require("./controllers/CarroController");
 router.get("/carros", CarroController.buscarTodos);
 
 router.post("/carro", CarroController.inserir); //rota para inserir dados
+
 router.put("/carro/:codigo", CarroController.alterar); //rota para alterar dados
+
+router.delete("carro/:codigo", CarroController.deletar);
 
 module.exports = router;
