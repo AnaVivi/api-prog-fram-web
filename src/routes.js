@@ -3,9 +3,10 @@ const router = express.Router();
 
 const CarroController = require("./controllers/CarroController.js");
 
-router.get("/carro/:codigo", CarroController.buscarUm);
 router.get("/carros", CarroController.buscarTodos);
-router.get("/carro/:codigo", CarroController.inserir);
-router.delete("carro/:codigo", CarroController.deletar);
+router.get("/carros/:codigo", CarroController.buscarUm);
+router.post("/carros", CarroController.inserir);
+router.put("/carros/:codigo", CarroController.alterar); //rota para alterar dados
+router.delete("/carros/:codigo", CarroController.deletar);
 
 module.exports = router;
